@@ -38,17 +38,17 @@ function getResult() {
     if (computerChoice === userChoice) {
         result = 'ITS A DRAW!'
     } else if (computerChoice === 'Rock' && userChoice == 'Scissors' || computerChoice === 'Scissors' && userChoice === 'Paper' || computerChoice === 'Paper' && userChoice === 'Rock') {
-        result = 'YOU LOSE!'
+        result = 'TRY AGAIN!'
     } else {
-        result = 'YOU WIN!'
+        result = 'YOUR POINT!'
     }
     resultDisplay.innerHTML = result;
 }
 
 addScore = () => {
-    if (result === 'YOU WIN!') {
+    if (result === 'YOUR POINT!') {
         yourScore++
-    } else if (result === 'YOU LOSE!') {
+    } else if (result === 'TRY AGAIN!') {
         computerScore++
     } else {
         result;
