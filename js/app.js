@@ -4,10 +4,11 @@ const resultDisplay = document.getElementById('result')
 const possibleChoices = document.querySelectorAll('button')
 const yourScoreDisplay = document.getElementById('your-score')
 const computerScoreDisplay = document.getElementById('computer-score')
+const resetButton = document.getElementById('reset-button')
 let userChoice
 let computerChoice
 let yourScore = 0
-let computerScore = 0
+let computerScore = 0 
 
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
@@ -54,5 +55,19 @@ addScore = () => {
     }
 
     yourScoreDisplay.innerHTML = yourScore;
-    computerScoreDisplay.innerHTML = computerScore;
+    computerScoreDisplay.innerHTML = computerScore;   
 }
+
+resetGame = () => {
+    resetButton.addEventListener('click', () => {
+        yourScore = 0;
+        computerScore = 0;
+        yourScoreDisplay.innerHTML = "0";
+        computerScoreDisplay.innerHTML = "0";
+        computerChoiceDisplay.innerHTML = "Choose";
+        userChoiceDisplay.innerHTML = "One";
+        resultDisplay.innerHTML = "Wisely!";
+    })
+
+}
+resetGame()

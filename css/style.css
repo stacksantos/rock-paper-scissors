@@ -57,10 +57,10 @@ body {
 .choices {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 10px;
     border-bottom: 4px solid white;
 }
 
@@ -79,20 +79,40 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
 }
-
-button {
-    margin-right: 10px;
-    font-size: 2em;
-    font-family: Impact;
-    border: 2px solid black;
-}
+#reset-button {
+    min-width: 130px;
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d90429;
+    background: #d90429;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #reset-button:hover {
+    background: #fff;
+    color: #d90429
+  }
 
 #result {
     color: #00eeff;
     font-size: 4em;
 }
 
-.css-button-retro--yellow {
+.buttons {
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -106,12 +126,15 @@ button {
     border: 1px solid #000;
     color: #000;
     background: transparent;
+    margin-right: 10px;
+    font-size: 1.5em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-  .css-button-retro--yellow:hover:after {
+  .buttons:hover:after {
     top: 0;
     left: 0;
   }
-  .css-button-retro--yellow:after {
+  .buttons:after {
     content: "";
     width: 100%;
     z-index: -1;
