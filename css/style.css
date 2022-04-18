@@ -12,14 +12,50 @@
     .buttons {
         display: flex;
     }
-    .score {
-        height: 15%;
-    }
     #your-score-title, #computer-score-title {
-        height: 1em;
-        
+        font-size: .5em; 
     }
 }
+@media screen and (max-width: 760px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .score {
+        display: flex;
+        flex-direction: column;
+    }
+    #your-score-title, #computer-score-title {
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+    }
+    .ys-container, .cs-container {
+        display: flex;
+        flex-direction: row;
+        font-size: 10px;
+        }
+    .choices {
+        font-size: .5em;
+        margin-bottom: 0;
+        padding: 0;
+        border-bottom: .1em solid #fff59d;
+    }
+    #reset-button {
+        font-size: 10px;
+        padding: 0;
+        margin: 0;
+    }
+    .buttons {
+        font-size: 5px;
+        padding: 0;
+    }
+}
+/*-----------end media--------------- */
 
 body {
     display: flex;
@@ -31,6 +67,7 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
 }
 .bg-image {
     background-image: url(https://images.unsplash.com/photo-1611457194403-d3aca4cf9d11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80);
@@ -60,6 +97,7 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+    font-size: 1.7em;
     font-family: 'Fira Sans', sans-serif;
     text-shadow: 0 0 1px;
     border-bottom: 5px dotted black;
@@ -70,19 +108,19 @@ body {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-family: 'Fira Sans', sans-serif;
     text-shadow: 0 0 1px;
     border-bottom: 5px dotted black;
     width: fit-content;
 }
 #your-score {
-    font-size: 3em;
+    font-size: 4em;
     text-shadow: 0 0 3px;
     color: #420000;
 }
 #computer-score {
-    font-size: 3em;
+    font-size: 4em;
     text-shadow: 0 0 3px;
     color: #420000;
 }
@@ -117,12 +155,12 @@ body {
 .choices h2 {
     display: flex;
     justify-content: center;
-    font-size: 1.4em;
+    font-size: 1.7em;
     padding: 4px;
     color: rgb(255, 255, 255);
     background-color: rgb(2, 3, 17);
     border: 1px dashed #fff59d;
-    width: 10em;
+    width: 15em;
     box-shadow:2px 8px 4px 2px black;
 }
 .choices span {
