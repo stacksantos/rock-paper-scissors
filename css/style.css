@@ -9,9 +9,12 @@
         width: 1em;
         height: .5em;
     }
-    .buttons {
+    .button-container {
         display: flex;
+        flex-direction: column;
+        font-size:large;
     }
+
     #your-score-title, #computer-score-title {
         font-size: .5em; 
     }
@@ -23,20 +26,19 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-    }
+        }
     .score {
         display: flex;
         flex-direction: column;
     }
     #your-score-title, #computer-score-title {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 10px;
     }
     .ys-container, .cs-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         font-size: 10px;
         }
     .choices {
@@ -52,7 +54,7 @@
     }
     .buttons {
         font-size: 5px;
-        padding: 0;
+        margin: 5px
     }
 }
 /*-----------end media--------------- */
@@ -169,12 +171,6 @@ body {
     color: #ffffff;
     text-shadow:4px 6px 5px black;
 }
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
 #reset-button h2{
     color: rgb(0, 0, 0);
     padding: .4em 3em;
@@ -208,7 +204,10 @@ body {
     font-family: impact;
     text-shadow:4px 6px 5px black;
 }
-
+.button-container {
+    display: flex;
+    width: max-content;
+}
 .buttons {
     height: 1.8em;
     color: #fff;
@@ -217,13 +216,12 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
-    display: inline-block;
     outline: none;
     border: 1px solid #fff59d;
     color: #000;
     background: transparent;
     margin-right: .3em;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   .buttons:hover:after {
